@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingBottom="2dp"
+    android:background="#2196F3"
+    android:id="@+id/list_item_layout"
+
+    >
+
+    <!--背景图和上面的文字-->
+    <FrameLayout
+        android:id="@+id/frame_layout_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        >
+
+        <ImageView
+            android:id="@+id/list_item_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/list_item_tip_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/add_plan_text_color"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/list_item_time_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list_item_tip_textView"
+                android:gravity="center_horizontal"
+                android:textColor="@color/add_plan_text_color"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <!--图片右边的三个信息框-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_toRightOf="@+id/frame_layout_img"
+        android:layout_toEndOf="@+id/frame_layout_img"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:layout_marginEnd="5dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/list_item_title_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:singleLine="true"
+            android:ellipsize="end"
+             />
+
+        <TextView
+            android:id="@+id/list_item_date_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:textSize="15sp"
+            android:textColor="#000"
+            />
+
+        <TextView
+            android:id="@+id/list_item_remarks_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:textColor="#000"
+            android:singleLine="true"
+            android:ellipsize="end"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:id="@+id/main_drawer_layout"
+    >
+    <!-- 主界面的内容 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <!-- 工具栏 -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/main_toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimaryDark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/app_name"
+            app:titleTextColor="@android:color/white"
+            tools:ignore="MissingConstraints"
+            />
+
+        <!-- 列表 -->
+        <ListView
+            android:id="@+id/home_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/main_toolBar"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scrollbars="none"
+            android:fadeScrollbars="false"
+            android:divider="@null"
+            android:dividerHeight="15dp"
+            />
+        <!-- 悬浮按钮 -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/home_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_add_white"
+            android:background="?attr/colorPrimaryDark"
+            app:backgroundTint="?attr/colorPrimaryDark"
+            tools:ignore="MissingConstraints"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            app:fabSize="auto"
+            />
+    </RelativeLayout>
+    <!-- 侧滑内容 -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/main_navigationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/wechat_layout"
+        app:menu="@menu/main_skid_menu"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>

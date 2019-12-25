@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Myitime</string>
+
+
+    <!--    activity_add_plan.xml文本    -->
+    <string name="add_plan_title">标题</string>
+    <string name="add_plan_title_tip_text">生日,纪念日,节日,考试...</string>
+    <string name="add_plan_remarks">备注</string>
+    <string name="add_plan_remark_tip_text">想说的话,目标,格言...</string>
+
+    <!--app_plan_toolbar_menu中的文本 -->
+    <string name="add_plan_toolbar_menu_ok">OK</string>
+    <!-- editor_toolbar_menu中的文本 -->
+    <string name="editor_menu_full_screen">全屏</string>
+    <string name="editor_menu_delete">删除</string>
+    <string name="editor_menu_share">分享</string>
+    <string name="editor_menu_editor">编辑</string>
+    <string name="editor_menu_setting">设置</string>
+    <!-- AddPlanActivity -->
+    <string name="tipInputText">Myitime:标题不能为空</string>
+
+    <!-- main侧滑菜单 -->
+    <string name="main_menu_login">未登录</string>
+    <string name="main_menu_login_tip">点击使用微信登录</string>
+
+    <string name="main_menu_count_down">计时</string>
+    <string name="main_menu_label">标签</string>
+    <string name="main_menu_small_parts">小部件</string>
+    <string name="main_menu_theme_color">主题色</string>
+    <string name="main_menu_pay_version">高级版</string>
+    <string name="maim_menu_setting">设置</string>
+    <string name="main_menu_about">关于</string>
+    <string name="main_menu_help">帮助与反馈</string>
+
+    <string name="open_drawer">打开侧滑菜单</string>
+    <string name="close_drawer">关闭侧滑菜单</string>
+
+
+</resources>

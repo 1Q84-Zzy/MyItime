@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--主页轮播页面的导航小圆点-->
+    <!-- 小园点选中时 -->
+    <item android:state_enabled="true">
+        <shape android:shape="oval">
+<!--            &lt;!&ndash;白色&ndash;&gt;
+            <solid android:color="#ffffff" />
+            &lt;!&ndash;半径&ndash;&gt;
+            <corners android:radius="5dp" />-->
+            <solid android:color="#FFFFFF" />
+            <stroke
+                android:width="0.7dp"
+                android:color="#FFFFFF" />
+            <size
+                android:width="5dp"
+                android:height="5dp" />
+        </shape>
+    </item >
+    <!-- 小圆点未选中时 -->
+    <item android:state_enabled="false">
+        <shape android:shape="oval">
+<!--            &lt;!&ndash;灰色&ndash;&gt;
+            <solid android:color="#00AAAAAA" />
+            &lt;!&ndash;半径&ndash;&gt;
+            <corners android:radius="5dp" />-->
+
+            <solid android:color="#00AAAAAA" />
+            <stroke
+                android:width="0.7dp"
+                android:color="#DAD7D7" />
+            <size
+                android:width="5dp"
+                android:height="5dp" />
+
+        </shape>
+    </item>
+
+</selector>

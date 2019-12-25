@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditorActivity"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/add_plan_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/button_back"
+        app:titleTextColor="@android:color/white"
+        tools:ignore="MissingConstraints"
+        app:menu="@menu/add_toolbar_menu"
+        />
+
+    <!-- 标题 备注 背景显示 -->
+    <RelativeLayout
+        android:id="@+id/add_plan_bgimage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/add_plan_toolBar"
+        android:orientation="vertical"
+        android:background="?attr/colorPrimaryDark"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <TextView
+            android:id="@+id/add_plan_title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:textSize="16sp"
+            android:text="@string/add_plan_title"
+            android:textColor="#FFFFFF"
+            />
+
+        <EditText
+            android:id="@+id/add_plan_title_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="40dp"
+            android:layout_below="@+id/add_plan_title_textView"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:textSize="20sp"
+            android:hint="@string/add_plan_title_tip_text"
+            android:textColorHint="@color/add_plan_text_color"
+            android:textColor="@color/add_plan_text_color"
+
+            />
+
+        <TextView
+            android:id="@+id/add_plan_remarks_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="40dp"
+            android:layout_below="@+id/add_plan_title_editText"
+            android:textSize="16sp"
+            android:text="@string/add_plan_remarks"
+            android:textColor="@color/add_plan_text_color"
+            />
+
+        <EditText
+            android:id="@+id/add_plan_remarks_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="40dp"
+            android:layout_below="@+id/add_plan_remarks_textView"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor"
+            android:textSize="20sp"
+            android:hint="@string/add_plan_remark_tip_text"
+            android:textColorHint="@color/add_plan_text_color"
+            android:textColor="@color/add_plan_text_color"
+            />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/add_plan_menu_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/add_plan_bgimage"
+        />
+
+</RelativeLayout>

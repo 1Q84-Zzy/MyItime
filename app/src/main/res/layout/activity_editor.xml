@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editor_menu_drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/editor_menu_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/button_back"
+        app:titleTextColor="@android:color/white"
+        tools:ignore="MissingConstraints"
+        app:menu="@menu/editor_toolbar_menu"
+        />
+
+    <FrameLayout
+        android:id="@+id/editor_bkg_frame"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/editor_menu_toolBar"
+        android:background="@drawable/test"
+        android:scaleType="fitXY">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:id="@+id/editor_bkg_title_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="标题标题"
+                android:textColor="@color/add_plan_text_color"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/editor_bkg_date_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editor_bkg_title_textView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="TextView"
+                android:textColor="@color/add_plan_text_color"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/editor_count_down_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editor_bkg_date_textView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="倒计时倒计时"
+                android:textColor="@color/add_plan_text_color"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
